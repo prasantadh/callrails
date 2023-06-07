@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Up and Running
 
-Things you may want to cover:
+The easiest way I found to set myself up to use [rbenv](https://github.com/rbenv/rbenv).
 
-* Ruby version
+On an ubuntu system,
+```bash
+sudo apt install rbenv
 
-* System dependencies
+# initialize the enviroment
+# this will also tell you what to add to your profile to load rbenv each time
+rbenv init
 
-* Configuration
 
-* Database creation
+# additionally it requires rbenv-build to install ruby
+# https://github.com/rbenv/ruby-build
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+rbenv install 3.2.2
 
-* Database initialization
+# running rbenv rehash was helpful
+```
 
-* How to run the test suite
+There are additonally a couple tricks involving `rbenv local 3.2.2` but these are
+more straight-forward.
 
-* Services (job queues, cache servers, search engines, etc.)
+## api 
 
-* Deployment instructions
+When run, this application intends to serve the following api:
 
-* ...
